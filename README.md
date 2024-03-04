@@ -6,7 +6,9 @@ This repository contains a binary built using Golang and a config file taken fro
 
 ## Running the process
 
-To run the process and get metric in a format compatible with Prometheus, edit the username and password in the **Config/config.yaml** file and then run:
+The process needs to be run on the same server as the one containing the IBM MQ environment.
+
+To run the process and get metrics in a format compatible with Prometheus, edit the username, password and queue manager in the **Config/config.yaml** file and then run:
 
     git clone https://github.com/RamSailopal/IBMMQ-Prometheus
     cd IBMMQ-Prometheus
@@ -18,3 +20,6 @@ http://serveraddress:9157
 
  ![Alt text](metrics.png?raw=true?raw=true "metrics")
 
+Additional options can be found with:
+
+    Binary/mq_prometheus --help
